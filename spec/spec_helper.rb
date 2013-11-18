@@ -91,7 +91,7 @@ Spork.each_run do
     config.infer_base_class_for_anonymous_controllers = false
 
     config.before(:each) do
-      DatabaseCleaner.clean_with(:truncation, except: %w{races professions social_classes gods})
+      DatabaseCleaner.clean_with(:truncation, except: %w{races professions social_classes gods stores})
     end
   end
 end

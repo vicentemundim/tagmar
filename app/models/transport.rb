@@ -1,0 +1,2 @@
+class Transport < Item
+end

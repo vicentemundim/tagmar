@@ -7,6 +7,13 @@ class Character
   belongs_to :social_class
   belongs_to :god
 
+  embeds_many :items, as: :onwer
+
+  embeds_one :weapon, as: :owner
+  embeds_one :armor, as: :owner
+  embeds_one :helmet, as: :owner
+  embeds_one :shield, as: :owner
+
   field :name, type: String
   field :biography, type: String
 
@@ -30,6 +37,8 @@ class Character
 
   field :combat_points, type: Integer
   field :magic_points, type: Integer
+
+  field :weapon_groups, type: Hash
 
   field :coins, type: Integer
 

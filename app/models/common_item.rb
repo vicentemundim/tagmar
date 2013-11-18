@@ -1,0 +1,2 @@
+class CommonItem < Item
+end

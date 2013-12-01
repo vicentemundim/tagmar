@@ -46,6 +46,7 @@ Spork.prefork do
   ENV["RAILS_ENV"] ||= 'test'
   require File.expand_path("../../config/environment", __FILE__)
   require 'rspec/rails'
+  require 'capybara/rspec'
 end
 
 Spork.each_run do
@@ -89,6 +90,8 @@ Spork.each_run do
     # automatically. This will be the default behavior in future versions of
     # rspec-rails.
     config.infer_base_class_for_anonymous_controllers = false
+
+    config.include DomHelpers
 
     config.before(:each) do
       DatabaseCleaner.clean_with(:truncation, except: %w{races professions social_classes gods stores})

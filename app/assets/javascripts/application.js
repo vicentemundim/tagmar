@@ -12,4 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require bootstrap
+//= require angular
+//= require_self
+
+$(function () {
+  $('.feedback').on('click', function () {
+    $(this).removeClass('feedback-active')
+    return false
+  })
+})

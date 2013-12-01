@@ -1,0 +1,16 @@
+<%= content_for :body_class, 'external-form' %>
+
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'form-signin' }) do |f| %>
+  <h2 class="form-signin-heading"><%= t('.title') %></h2>
+
+  <%= f.input_field :email, autofocus: true %>
+  <%= f.input_field :password %>
+
+  <%= f.label :remember_me, class: 'checkbox' do %>
+    <%= f.check_box :remember_me %>
+    <%= t('mongoid.attributes.user.remember_me') %>
+  <% end -%>
+
+  <%= f.button :submit, t('.button'), class: 'btn btn-lg btn-primary btn-block' %>
+  <%= link_to t('.forgot_password'), new_user_password_path %>
+<% end -%>

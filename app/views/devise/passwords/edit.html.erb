@@ -1,0 +1,18 @@
+<%= content_for :body_class, 'external-form' %>
+
+<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), method: :put, html: { class: 'form-password-change' }) do |f| %>
+  <fieldset class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
+    <h2><%= t('.title') %></h2>
+
+    <%= f.full_error :reset_password_token %>
+
+    <%= f.input :reset_password_token, as: :hidden %>
+
+    <%= f.input :password, label: t('.password'), required: true, autofocus: true %>
+    <%= f.input :password_confirmation, label: t('.password_confirmation'), required: true %>
+
+    <%= f.button :submit, t('.button'), class: 'btn btn-lg btn-primary' %>
+  </fieldset>
+<% end -%>
+
+<div class="clearfix"></div>

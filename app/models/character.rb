@@ -2,6 +2,8 @@ class Character
   include Mongoid::Document
   include Mongoid::Timestamps
 
+  belongs_to :user
+
   belongs_to :race
   belongs_to :profession
   belongs_to :social_class

@@ -21,3 +21,10 @@ en:
       play:
         title: "Play with your friends"
         description: "Create a party with your friends and start an adventure online!"
+  characters:
+    index:
+      title: "Your characters"
+      description: "Here is a list of your characters."
+      new_character:
+        title: "Create a new character"
+        description: "Add a character to your list."

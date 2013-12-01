@@ -2,8 +2,10 @@
 
 FactoryGirl.define do
   factory :character do
-    name "Bilbo Baggings"
+    sequence(:name) { |n| "Bilbo Baggings #{n}" }
     biography "A very nice hobbit!"
+
+    user { Current.user }
 
     race { Race.halfling }
     profession { Profession.thief }

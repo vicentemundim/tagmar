@@ -25,6 +25,9 @@ gem 'thin'
 # Authentication
 gem 'devise'
 
+# Controllers
+gem 'inherited_resources'
+
 # Forms
 gem 'simple_form'
 
@@ -38,6 +41,7 @@ group :development, :test do
   # RSpec
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'selenium-webdriver'
   gem 'simplecov'
   gem 'database_cleaner'
   gem 'spork'

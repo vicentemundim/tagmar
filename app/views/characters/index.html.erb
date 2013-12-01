@@ -1,0 +1,28 @@
+<h1><%= t('.title') %></h1>
+<p><%= t('.description') %></p>
+
+<ul class="media-list">
+  <% collection.each do |resource| %>
+    <li class="media">
+      <%= link_to content_tag(:i, nil, class: 'glyphicon glyphicon-user'), character_path(resource), class: 'pull-left' %>
+
+      <div class="media-body">
+        <h4 class="media-heading"><%= link_to resource.name, character_path(resource) %></h4>
+
+        <%= resource.biography %>
+      </div>
+    </li>
+  <% end -%>
+
+  <li class="media">
+    <%= link_to new_character_path, class: 'pull-left' do %>
+      <i class="glyphicon glyphicon-plus"></i>
+    <% end -%>
+
+    <div class="media-body">
+      <h4 class="media-heading"><%= link_to t('.new_character.title'), new_character_path %></h4>
+
+      <%= t('.new_character.description') %>
+    </div>
+  </li>
+</ul>

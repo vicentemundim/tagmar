@@ -1,8 +1,3 @@
-@import "compass/css3/border-radius";
-@import "compass/css3/box-shadow";
-@import "compass/css3/opacity";
-@import "compass/css3/transition";
-
 $default-feedback-height: 100px;
 
 // Feedback message container, displayed when any error or success message are to be displayed
@@ -15,7 +10,7 @@ $default-feedback-height: 100px;
 
   z-index: -1;
 
-  @include transition(visibility 0.2s ease-out, opacity 0.2s ease-out);
+  transition: visibility 0.2s ease-out, opacity 0.2s ease-out;
 
   visibility: hidden;
   opacity: 0;
@@ -33,8 +28,8 @@ $default-feedback-height: 100px;
     cursor: pointer;
     margin-bottom: 0;
 
-    @include border-top-radius(0px);
-    @include box-shadow(rgba(0, 0, 0, 0.5) 0 4px 15px -5px);
+    border-radius: 4px 0 0 0;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 4px 15px -5px;
 
     .close {
       position: absolute;

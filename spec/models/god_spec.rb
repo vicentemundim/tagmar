@@ -8,7 +8,7 @@ describe God do
   ].each do |god|
     describe ".#{god}" do
       it "returns the #{god} god" do
-        God.send(god).should eq(God.find_by(slug: god))
+        expect(God.send(god)).to eq(God.find_by(slug: god))
       end
     end
   end

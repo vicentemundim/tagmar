@@ -1,17 +1,17 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.1'
+gem 'rails', '>= 4.2.0'
 
 # Mongoid
-gem 'mongoid', git: 'https://github.com/mongoid/mongoid.git'
+gem 'mongoid'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
-gem 'compass-rails', "~> 2.0.alpha.0"
+gem 'sass-rails'
+gem 'autoprefixer-rails'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -26,7 +26,8 @@ gem 'thin'
 gem 'devise'
 
 # Controllers
-gem 'inherited_resources'
+gem 'inherited_resources', git: 'https://github.com/josevalim/inherited_resources.git', branch: 'rails-4-2'
+gem 'responders', '~> 2.0'
 
 # Forms
 gem 'simple_form'
@@ -36,15 +37,19 @@ gem 'bootstrap-sass'
 
 group :development, :test do
   # Use debugger
-  gem 'debugger'
+  gem 'byebug'
+
+  gem 'web-console', '~> 2.0'
+  gem 'spring'
 
   # RSpec
   gem 'rspec-rails'
+  gem 'rspec-its'
+  gem "spring-commands-rspec"
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'simplecov'
   gem 'database_cleaner'
-  gem 'spork'
 
   gem 'factory_girl_rails'
 end

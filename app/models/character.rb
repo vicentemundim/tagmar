@@ -44,10 +44,10 @@ class Character
 
   field :coins, type: Integer
 
-  validate :name
-  validate :intelect, :aura, :charisma, :strength, :constitution, :agility, presence: true, numericallity: { only_integer: true }
-  validate :height, :weight, presence: true, numericallity: { only_integer: true }
-  validate :race, :profession, :social_class, :god, presence: true
+  validates :name, presence: true
+  validates :intelect, :aura, :charisma, :strength, :constitution, :agility, presence: true, numericality: { only_integer: true }
+  validates :height, :weight, presence: true, numericality: { only_integer: true }
+  validates :race, :profession, :social_class, :god, presence: true
 
   before_save :configure_initial_stats
 

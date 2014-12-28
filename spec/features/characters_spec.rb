@@ -18,7 +18,7 @@ feature "Characters", signed_in: true do
         expect(page).to_not have_content(character.name)
       end
 
-      page.should have_link(t('characters.index.new_character.title'), href: new_character_path)
+      expect(page).to have_link(t('characters.index.new_character.title'), href: new_character_path)
     end
   end
 end

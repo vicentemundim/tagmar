@@ -1,0 +1,88 @@
+<% content_for :body_class, 'game' %>
+<% content_for :ng_app,     'game' %>
+
+<div ng-controller="GameController" ng-class="{ 'sidebar-open': displaySidebar }">
+  <nav class="sidebar">
+    <ul>
+      <li class="basic-data">
+        <div class="media media-center">
+          <div class="media-figure">
+            <i class="fa fa-user"></i>
+          </div>
+
+          <div class="media-body">
+            Legolas
+
+            <div class="info">
+              <p>Male, Wood Elf, Ranger</p>
+              <p>Low Nobility</p>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="attributes">
+        <div class="media media-center">
+          <div class="media-figure">
+            <i class="fa fa-star"></i>
+          </div>
+
+          <div class="media-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Int</th>
+                  <th>Aur</th>
+                  <th>Cha</th>
+                  <th>Str</th>
+                  <th>Con</th>
+                  <th>Dex</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>18</td>
+                  <td>13</td>
+                  <td>12</td>
+                  <td>18</td>
+                  <td>17</td>
+                  <td>20</td>
+                </tr>
+                <tr>
+                  <td>+1</td>
+                  <td>0</td>
+                  <td>+1</td>
+                  <td>0</td>
+                  <td>-1</td>
+                  <td>+1</td>
+                </tr>
+                <tr>
+                  <td>19</td>
+                  <td>13</td>
+                  <td>13</td>
+                  <td>18</td>
+                  <td>16</td>
+                  <td>21</td>
+                </tr>
+                <tr>
+                  <td>+3</td>
+                  <td>+1</td>
+                  <td>+1</td>
+                  <td>+3</td>
+                  <td>+2</td>
+                  <td>+5</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="main-content">
+
+
+    <a href="" ng-click="displaySidebar = !displaySidebar">Toggle Sidebar</a>
+  </section>
+</div>

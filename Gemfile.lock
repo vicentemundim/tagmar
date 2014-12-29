@@ -94,6 +94,8 @@ GEM
       factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
     ffi (1.9.6)
+    font-awesome-sass (4.2.2)
+      sass (~> 3.2)
     globalid (0.3.0)
       activesupport (>= 4.1.0)
     has_scope (0.6.0.rc)
@@ -246,6 +248,7 @@ DEPENDENCIES
   database_cleaner
   devise
   factory_girl_rails
+  font-awesome-sass
   inherited_resources!
   jquery-rails
   mongoid

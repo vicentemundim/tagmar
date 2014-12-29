@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require angular
+//= require mockups
 //= require_self
 
 $(function () {

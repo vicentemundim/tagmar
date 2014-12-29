@@ -34,6 +34,7 @@ gem 'simple_form'
 
 # Bootstrap
 gem 'bootstrap-sass'
+gem 'font-awesome-sass'
 
 group :development, :test do
   # Use debugger

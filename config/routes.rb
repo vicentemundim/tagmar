@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   resources :characters, only: [:index, :show, :new, :create]
 
+  get 'game' => 'mockups#game'
+
   # You can have the root of your site routed with "root"
   root 'home#index'
 

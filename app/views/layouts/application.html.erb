@@ -7,7 +7,7 @@
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= csrf_meta_tags %>
 </head>
-<body class="<%= yield :body_class %>">
+<body class="<%= yield :body_class %>" <% if content_for?(:ng_app) %>ng-app="<%= yield :ng_app %>"<% end %>>
 
 <header>
   <%= content_for?(:header) ? yield(:header) : render('header') %>

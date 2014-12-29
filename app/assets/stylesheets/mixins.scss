@@ -1,0 +1,25 @@
+/*
+ * A set of mixins to implement common patterns of components.
+ */
+
+$default-fade-duration: 0.2s;
+$default-fade-transition-function: ease;
+
+@mixin ellipsis-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin fade-out($duration: $default-fade-duration, $transition-function: $default-fade-transition-function) {
+  visibility: hidden;
+  opacity: 0;
+
+  transition: visibility $duration $transition-function, opacity $duration $transition-function;
+}
+
+@mixin fade-in {
+  visibility: visible;
+  opacity: 1;
+}
+

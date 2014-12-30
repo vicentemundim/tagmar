@@ -11,14 +11,37 @@
           </div>
 
           <div class="media-body">
-            Legolas
+            <h2>Legolas</h2>
 
             <div class="info">
-              <p>Male, Wood Elf, Ranger</p>
+              <p>Male, 21 years, 1.77m / 67kg</p>
+              <p>Wood Elf, Ranger</p>
               <p>Low Nobility</p>
             </div>
           </div>
         </div>
+      </li>
+
+      <li class="level">
+        <a href="" class="media media-center">
+          <div class="media-figure">
+            <i class="fa fa-chevron-circle-up"></i>
+          </div>
+
+          <div class="media-body">
+            <h2>Level <strong>2</strong></h2>
+
+            <dl>
+              <dt>Experience</dt>
+              <dd>18</dd>
+            </dl>
+
+            <dl>
+              <dt>Next Level</dt>
+              <dd>21</dd>
+            </dl>
+          </div>
+        </a>
       </li>
 
       <li class="attributes">
@@ -81,7 +104,85 @@
   </nav>
 
   <section class="main-content">
+    <section class="top-bar">
+      <ul>
+        <li title="Heroic Energy" class="fillable-bar" ng-style="{ 'background-size': '100% ' + (16 * 100 / 20) + '%' }">
+          <div class="media media-center">
+            <div class="media-figure">
+              <i class="fa fa-flash"></i>
+            </div>
 
+            <div class="media-body">
+              <span class="current">16</span>
+              <span class="total">20</span>
+            </div>
+          </div>
+        </li>
+
+        <li title="Physical Energy" class="fillable-bar red-bar" ng-style="{ 'background-size': '100% ' + (9 * 100 / 11) + '%' }">
+          <div class="media media-center">
+            <div class="media-figure">
+              <i class="fa fa-heart"></i>
+            </div>
+
+            <div class="media-body">
+              <span class="current">9</span>
+              <span class="total">11</span>
+            </div>
+          </div>
+        </li>
+
+        <li title="Karma" class="fillable-bar blue-bar" ng-style="{ 'background-size': '100% ' + (3 * 100 / 5) + '%' }">
+          <div class="media media-center">
+            <div class="media-figure">
+              <i class="fa fa-magic"></i>
+            </div>
+
+            <div class="media-body">
+              <span class="current">3</span>
+              <span class="total">5</span>
+            </div>
+          </div>
+        </li>
+
+        <li title="Defense">
+          <div class="media media-center">
+            <div class="media-figure">
+              <i class="fa fa-shield"></i>
+            </div>
+
+            <div class="media-body">
+              <span class="current">9</span>
+              <span class="total">12</span>
+            </div>
+          </div>
+        </li>
+
+        <li title="Current Weapon">
+          <a href="" class="media media-center">
+            <div class="media-figure">
+              <i class="fa fa-legal"></i>
+            </div>
+
+            <div class="media-body">
+              <h3>Short Sword</h3>
+            </div>
+          </a>
+        </li>
+
+        <li title="Current Armor">
+          <a href="" class="media media-center">
+            <div class="media-figure">
+              <i class="fa fa-circle"></i>
+            </div>
+
+            <div class="media-body">
+              <h3>Light Leather</h3>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
 
     <a href="" ng-click="displaySidebar = !displaySidebar">Toggle Sidebar</a>
   </section>

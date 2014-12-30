@@ -73,6 +73,29 @@ body.game {
           margin: 0;
         }
 
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+
+        h2 {
+          margin: 0;
+        }
+
+        dl {
+          margin: 0;
+          line-height: 18px;
+
+          dt, dd {
+            display: inline-block;
+            font-size: 0.7em;
+          }
+
+          dt {
+            width: 100px;
+          }
+        }
+
         .info {
           font-size: .7em;
           font-style: italic;
@@ -102,6 +125,81 @@ body.game {
     background-color: $content-background-color;
 
     transition: transform .3s;
+
+    .top-bar {
+      > ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        border-bottom: 3px solid #333;
+        font-size: 0;
+
+        > li {
+          position: relative;
+          display: inline-block;
+
+          height: 60px;
+
+          vertical-align: top;
+
+          font-size: 12px;
+
+          border-right: 3px solid #333;
+
+          padding: 10px;
+
+          &.fillable-bar {
+            background-image: linear-gradient(to top, #a6d87e, #d6efc2);
+            background-repeat: no-repeat;
+            background-size: 100% 0%;
+            background-position: 0 100%;
+
+            &.red-bar {
+              background-image: linear-gradient(to top, #d87e7e, #efc2c2);
+            }
+
+            &.blue-bar {
+              background-image: linear-gradient(to top, #7e83d8, #c8c2ef);
+            }
+          }
+
+          h3 {
+            margin: 0;
+            font-size: 2em;
+          }
+
+          a {
+            text-decoration: none;
+            color: inherit;
+          }
+
+          .media-figure {
+            font-size: 2em;
+          }
+
+          .current {
+            font-size: 3em;
+            line-height: 1em;
+          }
+
+          .total {
+            font-size: 2em;
+
+            &:before {
+              content: "/ ";
+            }
+          }
+
+          .bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+          }
+        }
+      }
+    }
   }
 
   .sidebar-open .main-content, .sidebar:hover + .main-content {

@@ -4,6 +4,30 @@
 <div ng-controller="GameController" ng-class="{ 'sidebar-open': displaySidebar }">
   <nav class="sidebar">
     <ul>
+      <li class="home">
+        <a href="<%= root_path %>" class="media media-center">
+          <div class="media-figure">
+            <i class="fa fa-home"></i>
+          </div>
+
+          <div class="media-body">
+            <h2>Back to Home</h2>
+          </div>
+        </a>
+      </li>
+
+      <li class="map">
+        <a href="" class="media media-center">
+          <div class="media-figure">
+            <i class="fa fa-globe"></i>
+          </div>
+
+          <div class="media-body">
+            <h2>Map</h2>
+          </div>
+        </a>
+      </li>
+
       <li class="basic-data">
         <div class="media media-center">
           <div class="media-figure">
@@ -99,6 +123,42 @@
             </table>
           </div>
         </div>
+      </li>
+
+      <li class="weapons-and-armor">
+        <a href="" class="media media-center">
+          <div class="media-figure">
+            <i class="fa fa-legal"></i>
+          </div>
+
+          <div class="media-body">
+            <h2>Weapons and Armor</h2>
+          </div>
+        </a>
+      </li>
+
+      <li class="spells">
+        <a href="" class="media media-center">
+          <div class="media-figure">
+            <i class="fa fa-magic"></i>
+          </div>
+
+          <div class="media-body">
+            <h2>Spells</h2>
+          </div>
+        </a>
+      </li>
+
+      <li class="inventory">
+        <a href="" class="media media-center">
+          <div class="media-figure">
+            <i class="fa fa-briefcase"></i>
+          </div>
+
+          <div class="media-body">
+            <h2>Inventory</h2>
+          </div>
+        </a>
       </li>
     </ul>
   </nav>
